@@ -109,7 +109,7 @@ header:
   # ────────────────────────────────────────────────────────────────────────────
   copyright:
     # Copyright notice - supports {year}, {name}, {license} placeholders
-    notice: "© {year} {name}. This work is licensed under {license}"
+    notice: "© {year} Neural Interface Laboratory, Pusan National University."
     license:
       type: cc # cc | custom
       allow_derivatives: false
