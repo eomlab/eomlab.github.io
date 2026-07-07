@@ -1,3 +1,43 @@
 {{ define "main" }}
+<style>
+  body > header:not(.nil-header),
+  body > nav,
+  body > .navbar,
+  body > .site-header,
+  body > .hb-navbar,
+  #navbar-main,
+  .navbar:not(.nil-nav) {
+    display: none !important;
+  }
+</style>
+<script>
+  (function () {
+    document.documentElement.classList.add('nil-home-page');
+    function hideThemeHeader() {
+      var selectors = [
+        'body > header',
+        'body > nav',
+        'body > .navbar',
+        'body > .site-header',
+        'body > .hb-navbar',
+        '#navbar-main',
+        '.navbar'
+      ];
+      document.querySelectorAll(selectors.join(',')).forEach(function (el) {
+        if (!el.closest('.nil-home') && !el.classList.contains('nil-header') && !el.classList.contains('nil-nav')) {
+          el.style.display = 'none';
+          el.setAttribute('aria-hidden', 'true');
+        }
+      });
+    }
+    hideThemeHeader();
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', hideThemeHeader);
+    } else {
+      hideThemeHeader();
+    }
+    window.addEventListener('load', hideThemeHeader);
+  })();
+</script>
 {{ partial "nil-home.html" . }}
 {{ end }}
