@@ -1,35 +1,101 @@
 {{ define "main" }}
 <style>
-  body > header:not(.nil-header),
-  body > nav,
-  body > .navbar,
-  body > .site-header,
-  body > .hb-navbar,
-  #navbar-main,
-  .navbar:not(.nil-nav) {
+  html.nil-home-page,
+  html.nil-home-page body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  html.nil-home-page body::before,
+  html.nil-home-page body::after {
     display: none !important;
+    content: none !important;
+    height: 0 !important;
+  }
+
+  html.nil-home-page body > header:not(.nil-header),
+  html.nil-home-page body > nav:not(.nil-nav),
+  html.nil-home-page body > .navbar,
+  html.nil-home-page body > .site-header,
+  html.nil-home-page body > .hb-navbar,
+  html.nil-home-page body > .fixed-top,
+  html.nil-home-page body > .sticky-top,
+  html.nil-home-page #navbar-main,
+  html.nil-home-page .navbar:not(.nil-nav),
+  html.nil-home-page .site-header,
+  html.nil-home-page .hb-navbar,
+  html.nil-home-page .page-header,
+  html.nil-home-page .topbar,
+  html.nil-home-page .top-bar {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    overflow: hidden !important;
+  }
+
+  html.nil-home-page body > main,
+  html.nil-home-page body > .page-body,
+  html.nil-home-page body > .content,
+  html.nil-home-page main.main-content {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  html.nil-home-page .nil-home {
+    margin-top: -40px !important;
   }
 </style>
 <script>
   (function () {
     document.documentElement.classList.add('nil-home-page');
+
     function hideThemeHeader() {
+      document.body.style.marginTop = '0px';
+      document.body.style.paddingTop = '0px';
+
       var selectors = [
         'body > header',
         'body > nav',
         'body > .navbar',
         'body > .site-header',
         'body > .hb-navbar',
+        'body > .fixed-top',
+        'body > .sticky-top',
         '#navbar-main',
-        '.navbar'
+        '.navbar',
+        '.site-header',
+        '.hb-navbar',
+        '.page-header',
+        '.topbar',
+        '.top-bar'
       ];
+
       document.querySelectorAll(selectors.join(',')).forEach(function (el) {
         if (!el.closest('.nil-home') && !el.classList.contains('nil-header') && !el.classList.contains('nil-nav')) {
-          el.style.display = 'none';
+          el.style.setProperty('display', 'none', 'important');
+          el.style.setProperty('visibility', 'hidden', 'important');
+          el.style.setProperty('height', '0', 'important');
+          el.style.setProperty('min-height', '0', 'important');
+          el.style.setProperty('max-height', '0', 'important');
+          el.style.setProperty('margin', '0', 'important');
+          el.style.setProperty('padding', '0', 'important');
+          el.style.setProperty('border', '0', 'important');
+          el.style.setProperty('box-shadow', 'none', 'important');
+          el.style.setProperty('background', 'transparent', 'important');
+          el.style.setProperty('overflow', 'hidden', 'important');
           el.setAttribute('aria-hidden', 'true');
         }
       });
     }
+
     hideThemeHeader();
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', hideThemeHeader);
@@ -37,6 +103,7 @@
       hideThemeHeader();
     }
     window.addEventListener('load', hideThemeHeader);
+    setTimeout(hideThemeHeader, 250);
   })();
 </script>
 {{ partial "nil-home.html" . }}
