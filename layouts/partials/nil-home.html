@@ -1,16 +1,10 @@
-<link rel="stylesheet" href="/css/nil-home.css?v=20260707b">
+<link rel="stylesheet" href="/css/nil-home-v3.css?v=20260707c">
 
 <div class="nil-home">
   <header class="nil-header">
     <div class="nil-header-inner">
       <a class="nil-brand" href="/" aria-label="Neural Interface Laboratory home">
-        <span class="nil-logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 64 64" role="img">
-            <path d="M31.9 9.4c-5.2-5.7-15.1-2.7-15.1 5.1-6.8.5-10.5 7.8-6.9 13.1-5.3 5.6-1.4 15.1 6.7 15.1 1 8.2 11.6 10.9 16 4.3 4.4 6.6 15.1 3.9 16-4.3 8.1 0 12-9.5 6.7-15.1 3.6-5.3-.1-12.6-6.9-13.1 0-7.8-9.9-10.8-15.1-5.1l-.7.8-.7-.8Z" />
-            <path d="M22.3 17.1c4.5 1.4 7.3 4.6 8.4 9.7M42.3 17.1c-4.5 1.4-7.3 4.6-8.4 9.7M17.9 28.1c5.6-.6 10.1 1.1 13.5 5.1M46.8 28.1c-5.6-.6-10.1 1.1-13.5 5.1M23.3 42.4c3.1-1.5 5.9-4 8.5-7.4M41.2 42.4c-3.1-1.5-5.9-4-8.5-7.4" />
-            <circle cx="32.3" cy="32.7" r="2.8" />
-          </svg>
-        </span>
+        <img src="/uploads/logo.png" alt="Neural Interface Laboratory logo" class="nil-brand-logo">
         <span>Neural Interface Laboratory</span>
       </a>
 
@@ -33,9 +27,7 @@
         <h1>Engineering Neural Interfaces for Personalized Brain Therapies</h1>
         <div class="nil-title-rule" aria-hidden="true"></div>
         <p class="nil-vision">
-          We aim to control the three-dimensional brain and nervous system using advanced neural interfaces.
-          By integrating brain-computer interfaces, neuromodulation, artificial intelligence, and digital twins,
-          we develop patient-specific closed-loop strategies for neurological disorders and neural rehabilitation.
+          Our laboratory develops closed-loop, personalized brain-computer interfaces to advance the treatment and rehabilitation of neurological disorders. Using digital twin models to understand patient-specific neural characteristics, we design BCI technologies for selective, non-invasive recording and control of the three-dimensional brain and nervous system.
         </p>
         <div class="nil-hero-actions">
           <a href="#research" class="nil-button">Explore Research <span>→</span></a>
@@ -43,51 +35,49 @@
         </div>
       </div>
 
-      <div class="nil-hero-art" aria-label="Neural interface, AI, and digital twin workflow illustration">
+      <div class="nil-hero-art nil-platform-art" aria-label="Closed-loop personalized BCI platform schematic">
         <div class="nil-art-grid" aria-hidden="true"></div>
-        <div class="nil-anatomy-card">
-          <div class="nil-head-shape">
-            <div class="nil-brain-core"></div>
-            <div class="nil-spine-line"></div>
-            <div class="nil-interface-device device-a"></div>
-            <div class="nil-interface-device device-b"></div>
-          </div>
-          <span class="nil-art-caption neural-device">Neural Interface Devices</span>
-        </div>
 
-        <div class="nil-signal-card card-bci">
-          <strong>BCI Signals</strong>
-          <span class="wave wave-one"></span>
-        </div>
-        <div class="nil-signal-card card-data">
-          <strong>Neural Data</strong>
-          <span class="wave wave-two"></span>
-        </div>
-
-        <div class="nil-ai-chip">
-          <span>AI</span>
-          <small>Machine Learning</small>
-        </div>
-
-        <div class="nil-twin-panel">
-          <div class="nil-twin-brain"></div>
+        <div class="nil-platform-node nil-node-digital">
+          <div class="nil-node-icon brain-map"></div>
           <strong>Digital Twin</strong>
-          <small>Patient-specific model</small>
+          <small>Patient-specific neural model</small>
         </div>
 
-        <div class="nil-therapy-panel">
-          <strong>Personalized Therapy</strong>
-          <div class="nil-therapy-items">
-            <span>Neuromodulation</span>
-            <span>Devices</span>
-            <span>Rehabilitation</span>
+        <div class="nil-platform-node nil-node-interface">
+          <div class="nil-node-icon interface-array"></div>
+          <strong>Neural Interface</strong>
+          <small>Selective non-invasive recording & modulation</small>
+        </div>
+
+        <div class="nil-platform-center">
+          <div class="nil-patient-head">
+            <span class="nil-brain-glow"></span>
+            <span class="nil-signal-dot dot-a"></span>
+            <span class="nil-signal-dot dot-b"></span>
+            <span class="nil-signal-dot dot-c"></span>
           </div>
+          <strong>3D Brain & Nervous System</strong>
+          <small>Patient-specific closed-loop control</small>
         </div>
 
-        <div class="nil-flow-arrow arrow-one"></div>
-        <div class="nil-flow-arrow arrow-two"></div>
-        <div class="nil-flow-arrow arrow-three"></div>
-        <div class="nil-loop-arrow">Closed-loop feedback</div>
+        <div class="nil-platform-node nil-node-bci">
+          <div class="nil-node-icon bci-wave"></div>
+          <strong>Brain-Computer Interface</strong>
+          <small>Decoding · feedback · adaptation</small>
+        </div>
+
+        <div class="nil-platform-node nil-node-therapy">
+          <div class="nil-node-icon rehab-person"></div>
+          <strong>Therapy & Rehabilitation</strong>
+          <small>Neurological disorder care</small>
+        </div>
+
+        <div class="nil-loop-path path-a"></div>
+        <div class="nil-loop-path path-b"></div>
+        <div class="nil-loop-path path-c"></div>
+        <div class="nil-loop-path path-d"></div>
+        <div class="nil-loop-label">Closed-loop personalized BCI</div>
       </div>
     </section>
 
@@ -95,40 +85,40 @@
       <div class="nil-section-row compact">
         <div>
           <p class="nil-label">Research Areas</p>
-          <h2>Core platforms for next-generation neural interfaces</h2>
+          <h2>End-to-End BCI Research Platform</h2>
         </div>
       </div>
 
       <div class="nil-card-grid four">
-        <a class="nil-card" href="/research/#neural-prostheses">
-          <div class="nil-card-visual visual-prosthesis"><span></span></div>
-          <div class="nil-icon">NP</div>
-          <h3>Neural Prostheses</h3>
-          <p>Restoring sensory and motor function through retinal, cortical, and implantable neural interfaces.</p>
-          <span class="nil-card-arrow">→</span>
-        </a>
-
-        <a class="nil-card" href="/research/#neuromodulation">
-          <div class="nil-card-visual visual-neuromod"><span></span></div>
-          <div class="nil-icon">NM</div>
-          <h3>Neuromodulation</h3>
-          <p>Developing TMS, tES, temporal interference, and closed-loop stimulation strategies for neural control.</p>
-          <span class="nil-card-arrow">→</span>
-        </a>
-
-        <a class="nil-card" href="/research/#bci">
-          <div class="nil-card-visual visual-bci"><span></span></div>
-          <div class="nil-icon">BCI</div>
-          <h3>Brain-Computer Interfaces</h3>
-          <p>Building recording, decoding, and stimulation systems that adapt to neural state in real time.</p>
-          <span class="nil-card-arrow">→</span>
-        </a>
-
         <a class="nil-card" href="/research/#digital-twin">
           <div class="nil-card-visual visual-twin"><span></span></div>
-          <div class="nil-icon">AI</div>
-          <h3>AI & Digital Twins for Closed-Loop Therapy</h3>
-          <p>Leveraging computational models and AI to predict, personalize, and optimize therapy for each patient.</p>
+          <div class="nil-icon">DT</div>
+          <h3>Digital Twin Modeling</h3>
+          <p>Patient-specific computational models to characterize neural states and guide personalized therapy.</p>
+          <span class="nil-card-arrow">→</span>
+        </a>
+
+        <a class="nil-card" href="/research/#neural-interface-system">
+          <div class="nil-card-visual visual-interface"><span></span></div>
+          <div class="nil-icon">NI</div>
+          <h3>Neural Interface Systems</h3>
+          <p>Hardware platforms for selective neural recording, stimulation, modulation, and closed-loop control.</p>
+          <span class="nil-card-arrow">→</span>
+        </a>
+
+        <a class="nil-card" href="/research/#bci-neural-prosthesis">
+          <div class="nil-card-visual visual-bci"><span></span></div>
+          <div class="nil-icon">BCI</div>
+          <h3>BCI & Neural Prostheses</h3>
+          <p>Brain-computer interfaces and neural prosthetic strategies for functional restoration and rehabilitation.</p>
+          <span class="nil-card-arrow">→</span>
+        </a>
+
+        <a class="nil-card" href="/research/#animal-validation">
+          <div class="nil-card-visual visual-validation"><span></span></div>
+          <div class="nil-icon">AV</div>
+          <h3>Preclinical Validation</h3>
+          <p>Animal studies and translational experiments to validate neural interface technologies in vivo.</p>
           <span class="nil-card-arrow">→</span>
         </a>
       </div>
@@ -137,8 +127,8 @@
     <section id="news" class="nil-section">
       <div class="nil-section-row">
         <div>
-          <p class="nil-label">Latest News</p>
-          <h2>Recent updates from the lab</h2>
+          <p class="nil-label">News</p>
+          <h2>Lab news and updates</h2>
         </div>
         <a href="#news" class="nil-link">View all news →</a>
       </div>
@@ -157,7 +147,7 @@
           <div class="nil-news-thumb thumb-model"></div>
           <div>
             <time>Jul 2026</time>
-            <h3>AI- and digital twin-guided therapy platform under development</h3>
+            <h3>Digital twin-guided personalized BCI platform under development</h3>
             <a href="#research">Read more →</a>
           </div>
         </article>
@@ -166,7 +156,7 @@
           <div class="nil-news-thumb thumb-device"></div>
           <div>
             <time>Jul 2026</time>
-            <h3>Wireless neural stimulator and neuromodulation research expanded</h3>
+            <h3>Closed-loop neural interface and neuromodulation research expanded</h3>
             <a href="#publications">Read more →</a>
           </div>
         </article>
@@ -182,22 +172,35 @@
       </div>
     </section>
 
-    <section id="people" class="nil-section">
+    <section id="people" class="nil-section nil-people-section">
       <div class="nil-section-row">
         <div>
-          <p class="nil-label">People</p>
-          <h2>Research team</h2>
+          <p class="nil-label">Research Team</p>
+          <h2>People</h2>
         </div>
         <a href="#people" class="nil-link">View all people →</a>
       </div>
 
-      <div class="nil-people-grid">
-        <div class="nil-person"><div class="nil-avatar avatar-pi">KSE</div><h3>Kyeong-Sik Eom</h3><p>Principal Investigator</p></div>
-        <div class="nil-person"><div class="nil-avatar">PhD</div><h3>Graduate Researchers</h3><p>Ph.D. / M.S. Students</p></div>
-        <div class="nil-person"><div class="nil-avatar">UG</div><h3>Undergraduate Researchers</h3><p>Student Researchers</p></div>
-        <div class="nil-person"><div class="nil-avatar">CL</div><h3>Clinical Collaborators</h3><p>Neurotechnology Translation</p></div>
-        <div class="nil-person"><div class="nil-avatar">AI</div><h3>Modeling Team</h3><p>Simulation & Digital Twin</p></div>
-        <div class="nil-person"><div class="nil-avatar">AL</div><h3>Alumni</h3><p>Former Members</p></div>
+      <div class="nil-pi-card">
+        <div class="nil-avatar avatar-pi">KSE</div>
+        <div class="nil-pi-info">
+          <h3>Kyungsik Eom, Ph.D.</h3>
+          <p>Principal Investigator · Associate Professor, Department of Electronics Engineering, Pusan National University</p>
+          <div class="nil-profile-links">
+            <a href="/uploads/Kyungsik%20Eom_Curriculum%20Vitae_202607.pdf" target="_blank" rel="noopener">CV</a>
+            <a href="https://scholar.google.com/scholar?q=Kyungsik+Eom+Pusan+National+University" target="_blank" rel="noopener">Google Scholar</a>
+            <a href="mailto:kseom@pusan.ac.kr">Email</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="nil-people-grid nil-member-grid">
+        <div class="nil-person"><div class="nil-avatar">Postdoc</div><h3>Postdoctoral Researchers</h3><p>Neural engineering & bioelectronics</p></div>
+        <div class="nil-person"><div class="nil-avatar">PhD</div><h3>Ph.D. Students</h3><p>Closed-loop BCI and neuromodulation</p></div>
+        <div class="nil-person"><div class="nil-avatar">MS</div><h3>M.S. Students</h3><p>Devices, modeling, and validation</p></div>
+        <div class="nil-person"><div class="nil-avatar">UG</div><h3>Undergraduate Researchers</h3><p>Student research projects</p></div>
+        <div class="nil-person"><div class="nil-avatar">CL</div><h3>Clinical Collaborators</h3><p>Therapy and rehabilitation translation</p></div>
+        <div class="nil-person"><div class="nil-avatar">AL</div><h3>Alumni</h3><p>Former members</p></div>
       </div>
     </section>
 
@@ -261,7 +264,7 @@
         </div>
         <div class="nil-contact-item">
           <span>✉</span>
-          <div><h3>Email</h3><p>Contact information will be updated soon.</p></div>
+          <div><h3>Email</h3><p><a href="mailto:kseom@pusan.ac.kr">kseom@pusan.ac.kr</a></p></div>
         </div>
         <div class="nil-contact-item">
           <span>◎</span>
@@ -272,7 +275,7 @@
       <div class="nil-contact-box">
         <h3>We are always interested in collaborations and motivated people.</h3>
         <p>Students and collaborators interested in neural engineering, bioelectronics, BCI, neuromodulation, retinal prosthesis, and computational neuroengineering are welcome.</p>
-        <a href="mailto:" class="nil-button">Get in touch</a>
+        <a href="mailto:kseom@pusan.ac.kr" class="nil-button">Get in touch</a>
       </div>
     </section>
   </main>
