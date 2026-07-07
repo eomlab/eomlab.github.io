@@ -78,19 +78,19 @@ hugoblox:
   # HEADER
   # Site header and navigation bar
   # ────────────────────────────────────────────────────────────────────────────
-header:
-  enable: true
-  style: navbar
-  sticky: true
-  align: center
-  search: false
-  theme_toggle: true
-  theme_picker: false
-  language_switcher: false
-  cta:
-    enable: false
-    text: ""
-    url: ""
+  header:
+    enable: true
+    style: navbar
+    sticky: true
+    align: center
+    search: false
+    theme_toggle: true
+    theme_picker: false
+    language_switcher: false
+    cta:
+      enable: false
+      text: ""
+      url: ""
 
   # ────────────────────────────────────────────────────────────────────────────
   # FOOTER
