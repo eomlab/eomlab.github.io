@@ -8,20 +8,20 @@ main:
     url: /
     weight: 10
   - name: News
-    url: /#papers
+    url: /#News
     weight: 11
   - name: Team
-    url: /#talks
+    url: Team/
     weight: 12
   - name: Research
-    url: /#news
+    url: Research/
     weight: 13
   - name: Publications
-    url: experience/
+    url: Publications/
     weight: 20
   - name: Gallery
-    url: projects/
+    url: Gallery/
     weight: 30
   - name: Contact
-    url: courses/
+    url: /#Contact
     weight: 40
