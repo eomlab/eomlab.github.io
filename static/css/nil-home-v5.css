@@ -40,31 +40,31 @@
 }
 
 .nil-student-grid .nil-student-card:nth-child(1) .nil-student-photo {
-  background-image: url('/uploads/Young%20Hoon%20Park.png') !important;
+  background-image: url('/uploads/Young-Hoon-Park.png'), url('/uploads/Young%20Hoon%20Park.png') !important;
 }
 
 .nil-student-grid .nil-student-card:nth-child(2) .nil-student-photo {
-  background-image: url('/uploads/Jeongjoo%20Moon.png') !important;
+  background-image: url('/uploads/Jeongjoo-Moon.png'), url('/uploads/Jeongjoo%20Moon.png') !important;
 }
 
 .nil-student-grid .nil-student-card:nth-child(3) .nil-student-photo {
-  background-image: url('/uploads/Donghwan%20Song.png') !important;
+  background-image: url('/uploads/Donghwan-Song.png'), url('/uploads/Donghwan%20Song.png') !important;
 }
 
 .nil-student-grid .nil-student-card:nth-child(4) .nil-student-photo {
-  background-image: url('/uploads/Anahita%20Ghasemi.png') !important;
+  background-image: url('/uploads/Anahita-Ghasemi.png'), url('/uploads/Anahita%20Ghasemi.png') !important;
 }
 
 .nil-student-grid .nil-student-card:nth-child(5) .nil-student-photo {
-  background-image: url('/uploads/Jaeeun%20Jang.png') !important;
+  background-image: url('/uploads/Jaeeun-Jang.png'), url('/uploads/Jaeeun%20Jang.png') !important;
 }
 
 .nil-student-grid .nil-student-card:nth-child(6) .nil-student-photo {
-  background-image: url('/uploads/Younghwan%20Choi.png') !important;
+  background-image: url('/uploads/Younghwan-Choi.png'), url('/uploads/Younghwan%20Choi.png') !important;
 }
 
 .nil-avatar.avatar-pi {
-  background-image: url('/uploads/Kyungsik%20Eom.png.jpg') !important;
+  background-image: url('/uploads/Kyungsik-Eom.png.jpg'), url('/uploads/Kyungsik%20Eom.png.jpg') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
