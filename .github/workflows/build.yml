@@ -146,3 +146,4 @@ jobs:
       uses: actions/upload-pages-artifact@v4
       with:
         path: ./public
+        name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
