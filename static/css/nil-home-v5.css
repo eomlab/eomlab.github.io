@@ -1,5 +1,11 @@
 @import url('/css/nil-home-v4.css?v=20260707d');
 
+.nil-area-card { padding-top: 26px !important; min-height: 310px; background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(247,251,255,0.92)) !important; }
+.nil-area-tag { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 22px; padding: 9px 12px; border-radius: 999px; background: #f0f7ff; border: 1px solid rgba(13,110,253,0.16); color: var(--nil-blue-700); font-weight: 900; letter-spacing: 0.02em; }
+.nil-area-tag span { font-size: 0.76rem; text-transform: uppercase; }
+.nil-area-tag strong { min-width: 42px; height: 32px; padding: 0 10px; border-radius: 999px; display: inline-grid; place-items: center; background: linear-gradient(135deg, #415be4, #253eaa); color: #fff; font-size: 0.88rem; letter-spacing: 0.03em; box-shadow: 0 8px 18px rgba(37,62,170,0.18); }
+.nil-area-card h3 { margin-top: 0 !important; }
+
 .nil-student-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 18px; }
 .nil-student-card { padding: 16px 12px 18px; text-align: center; border-radius: 16px; background: rgba(255, 255, 255, 0.9); border: 1px solid var(--nil-border); box-shadow: 0 6px 18px rgba(8, 26, 68, 0.05); transition: transform 170ms ease, box-shadow 170ms ease; }
 .nil-student-card:hover { transform: translateY(-3px); box-shadow: var(--nil-soft-shadow); }
