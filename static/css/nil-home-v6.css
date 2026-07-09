@@ -1,0 +1,96 @@
+@import url('/css/nil-home-v5.css?v=20260708n');
+
+.nil-hero-switcher {
+  position: relative !important;
+  display: block !important;
+  min-height: 520px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: 36px !important;
+  background: linear-gradient(135deg, rgba(255,255,255,0.96), rgba(239,246,255,0.92)) !important;
+  border: 1px solid rgba(13,110,253,0.10) !important;
+  box-shadow: 0 24px 58px rgba(8,26,68,0.08) !important;
+}
+.nil-hero-switcher::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 22% 22%, rgba(87,118,255,0.13), transparent 34%),
+    radial-gradient(circle at 78% 30%, rgba(89,178,255,0.12), transparent 36%);
+  pointer-events: none;
+  z-index: 0;
+}
+.nil-hero-switcher .nil-hero-slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  padding: 26px;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: scale(1.015);
+  animation: nilHeroSlide 11s infinite;
+  animation-fill-mode: both;
+  z-index: 1;
+}
+.nil-hero-switcher .nil-hero-slide-two { animation-delay: 5.5s; }
+.nil-hero-switcher .nil-hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 12px 24px rgba(8,26,68,0.05));
+}
+.nil-hero-switcher .nil-hero-slide figcaption {
+  position: absolute;
+  left: 28px;
+  bottom: 22px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(13,110,253,0.12);
+  color: var(--nil-blue-700);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+.nil-hero-slide-dots {
+  position: absolute;
+  right: 28px;
+  bottom: 26px;
+  z-index: 2;
+  display: flex;
+  gap: 8px;
+}
+.nil-hero-slide-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(65,91,228,0.22);
+  border: 1px solid rgba(65,91,228,0.26);
+  animation: nilHeroDot 11s infinite;
+}
+.nil-hero-slide-dots span:nth-child(2) { animation-delay: 5.5s; }
+@keyframes nilHeroSlide {
+  0%, 42% { opacity: 1; transform: scale(1); }
+  49%, 92% { opacity: 0; transform: scale(1.015); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes nilHeroDot {
+  0%, 42% { background: #415be4; transform: scale(1.25); }
+  49%, 92% { background: rgba(65,91,228,0.22); transform: scale(1); }
+  100% { background: #415be4; transform: scale(1.25); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nil-hero-switcher .nil-hero-slide,
+  .nil-hero-slide-dots span { animation: none !important; }
+  .nil-hero-switcher .nil-hero-slide-one { opacity: 1; transform: none; }
+  .nil-hero-switcher .nil-hero-slide-two { opacity: 0; }
+}
+@media (max-width: 900px) {
+  .nil-hero-switcher { min-height: 390px !important; }
+  .nil-hero-switcher .nil-hero-slide { padding: 18px; }
+}
