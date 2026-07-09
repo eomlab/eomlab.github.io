@@ -1,4 +1,24 @@
 <link rel="stylesheet" href="/css/nil-home-v6.css?v=20260708d">
+<script>
+  (function () {
+    var href = '/uploads/logo.png?v=20260709a';
+    function setLabFavicon() {
+      document.querySelectorAll("link[rel~='icon'], link[rel='shortcut icon'], link[rel='apple-touch-icon']").forEach(function (el) { el.remove(); });
+      var icon = document.createElement('link');
+      icon.rel = 'icon';
+      icon.type = 'image/png';
+      icon.href = href;
+      document.head.appendChild(icon);
+      var shortcut = document.createElement('link');
+      shortcut.rel = 'shortcut icon';
+      shortcut.type = 'image/png';
+      shortcut.href = href;
+      document.head.appendChild(shortcut);
+    }
+    if (document.head) { setLabFavicon(); }
+    if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', setLabFavicon); }
+  })();
+</script>
 
 <div class="nil-home">
   <header class="nil-header">
@@ -20,7 +40,7 @@
         <h1>Engineering Neural Interfaces for Personalized Brain Therapies</h1>
         <div class="nil-title-rule" aria-hidden="true"></div>
         <p class="nil-vision">Our laboratory develops closed-loop, personalized brain-computer interfaces for the treatment and rehabilitation of neurological disorders. Using digital twin models to capture patient-specific neural characteristics, we build BCI platforms for selective, non-invasive recording and control of the three-dimensional brain and nervous system.</p>
-        <div class="nil-hero-actions"><a href="#research" class="nil-button">Learn More <span>→</span></a></div>
+        <div class="nil-hero-actions"><a href="/research/" class="nil-button">Learn More <span>→</span></a></div>
       </div>
       <div class="nil-hero-art nil-hero-switcher" aria-label="AI-enabled closed-loop BCI platform slideshow">
         <figure class="nil-hero-slide nil-hero-slide-one"><img src="/uploads/main_1.png?v=20260708b" alt="AI-enabled closed-loop BCI platform"></figure>
