@@ -27,7 +27,18 @@
   html.nil-home-page .hb-navbar,
   html.nil-home-page .page-header,
   html.nil-home-page .topbar,
-  html.nil-home-page .top-bar {
+  html.nil-home-page .top-bar,
+  html.nil-home-page body > footer:not(.nil-footer),
+  html.nil-home-page footer:not(.nil-footer),
+  html.nil-home-page .site-footer,
+  html.nil-home-page .page-footer,
+  html.nil-home-page .hb-footer,
+  html.nil-home-page .powered-by,
+  html.nil-home-page .footer-license-icons,
+  html.nil-home-page .license-icons,
+  html.nil-home-page .copyright-license-text,
+  html.nil-home-page .nil-home + *,
+  html.nil-home-page .nil-home ~ * {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;
@@ -47,19 +58,24 @@
   html.nil-home-page main.main-content {
     margin-top: 0 !important;
     padding-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
   }
 
   html.nil-home-page .nil-home {
     margin-top: -40px !important;
+    margin-bottom: 0 !important;
   }
 </style>
 <script>
   (function () {
     document.documentElement.classList.add('nil-home-page');
 
-    function hideThemeHeader() {
+    function hideThemeChrome() {
       document.body.style.marginTop = '0px';
       document.body.style.paddingTop = '0px';
+      document.body.style.marginBottom = '0px';
+      document.body.style.paddingBottom = '0px';
 
       var selectors = [
         'body > header',
@@ -75,11 +91,20 @@
         '.hb-navbar',
         '.page-header',
         '.topbar',
-        '.top-bar'
+        '.top-bar',
+        'body > footer',
+        'footer',
+        '.site-footer',
+        '.page-footer',
+        '.hb-footer',
+        '.powered-by',
+        '.footer-license-icons',
+        '.license-icons',
+        '.copyright-license-text'
       ];
 
       document.querySelectorAll(selectors.join(',')).forEach(function (el) {
-        if (!el.closest('.nil-home') && !el.classList.contains('nil-header') && !el.classList.contains('nil-nav')) {
+        if (!el.closest('.nil-home') && !el.classList.contains('nil-header') && !el.classList.contains('nil-nav') && !el.classList.contains('nil-footer')) {
           el.style.setProperty('display', 'none', 'important');
           el.style.setProperty('visibility', 'hidden', 'important');
           el.style.setProperty('height', '0', 'important');
@@ -96,14 +121,15 @@
       });
     }
 
-    hideThemeHeader();
+    hideThemeChrome();
     if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', hideThemeHeader);
+      document.addEventListener('DOMContentLoaded', hideThemeChrome);
     } else {
-      hideThemeHeader();
+      hideThemeChrome();
     }
-    window.addEventListener('load', hideThemeHeader);
-    setTimeout(hideThemeHeader, 250);
+    window.addEventListener('load', hideThemeChrome);
+    setTimeout(hideThemeChrome, 250);
+    setTimeout(hideThemeChrome, 1000);
   })();
 </script>
 {{ partial "nil-home.html" . }}
