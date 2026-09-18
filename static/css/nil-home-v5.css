@@ -273,3 +273,18 @@
   .nil-news { grid-template-columns: 108px minmax(0, 1fr); }
   .nil-news-thumb { width: 108px; height: 108px; }
 }
+
+
+/* Homepage research typography - 2026-09-18 */
+.nil-area-card h3 {
+  font-size: 1.12rem !important;
+  line-height: 1.28 !important;
+}
+.nil-area-card p {
+  font-size: 1.02rem !important;
+  line-height: 1.5 !important;
+}
+.nil-vision {
+  font-size: 1.12rem !important;
+  line-height: 1.68 !important;
+}
