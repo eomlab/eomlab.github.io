@@ -83,3 +83,133 @@
 .nil-back-link { display: inline-flex; margin-bottom: 22px; color: var(--nil-blue-700); font-weight: 850; }
 @media (max-width: 1100px) { .nil-student-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .nil-contact-layout { grid-template-columns: 1fr; } .nil-news-page .nil-detail-card.has-image { grid-template-columns: 1fr; } .nil-news-page .nil-news-image { width: 100%; height: 190px; } .nil-gallery-media-grid, .nil-gallery-page .nil-gallery-media-grid, .nil-gallery-icon-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 720px) { .nil-student-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .nil-student-photo { width: 82px; height: 82px; } .nil-gallery-media-grid, .nil-gallery-page .nil-gallery-media-grid, .nil-gallery-icon-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+
+/* Gallery album redesign - 2026-09-18 */
+.nil-gallery-media-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.nil-gallery-media-card {
+  min-height: 0;
+  padding: 14px;
+  justify-items: stretch;
+  text-align: left;
+  gap: 8px;
+  border-radius: 20px;
+}
+.nil-gallery-media {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  margin: 0 0 4px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(8,26,68,.055);
+}
+.nil-gallery-media-card time,
+.nil-gallery-media-card h3,
+.nil-gallery-media-card p {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.nil-gallery-media-card h3 { font-size: .98rem; }
+.nil-gallery-media-card p { font-size: .82rem; }
+.nil-gallery-page .nil-gallery-media-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.nil-gallery-page .nil-gallery-media-card {
+  min-height: 0;
+  padding: 16px;
+}
+.nil-gallery-page .nil-gallery-media {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  border-radius: 16px;
+}
+.nil-gallery-media-collage {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2px;
+}
+.nil-gallery-media-collage img {
+  min-width: 0;
+  min-height: 0;
+}
+.nil-gallery-album-page .nil-detail-header {
+  max-width: 860px;
+}
+.nil-album-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+.nil-album-photo {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #f6f8fb;
+  border: 1px solid var(--nil-border);
+  box-shadow: 0 14px 30px rgba(8,26,68,.06);
+  cursor: zoom-in;
+}
+.nil-album-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 72vh;
+  object-fit: contain;
+  background: #f6f8fb;
+}
+.nil-album-photo-caption {
+  margin: 9px 4px 0;
+  color: #64748b;
+  font-size: .8rem;
+}
+.nil-gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  background: rgba(6, 15, 33, .92);
+}
+.nil-gallery-lightbox.is-open { display: flex; }
+.nil-gallery-lightbox img {
+  max-width: min(94vw, 1600px);
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 24px 70px rgba(0,0,0,.32);
+}
+.nil-gallery-lightbox button {
+  position: fixed;
+  top: 18px;
+  right: 22px;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.16);
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .nil-gallery-media-grid,
+  .nil-gallery-page .nil-gallery-media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .nil-album-photo-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 620px) {
+  .nil-gallery-media-grid,
+  .nil-gallery-page .nil-gallery-media-grid {
+    grid-template-columns: 1fr;
+  }
+  .nil-gallery-media { aspect-ratio: 16 / 9; }
+}
