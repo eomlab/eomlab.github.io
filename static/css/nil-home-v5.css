@@ -237,3 +237,39 @@
     height: 112px;
   }
 }
+
+
+/* Homepage news sizing - 2026-09-18 */
+.nil-news-strip {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px 30px;
+}
+.nil-news {
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 18px;
+}
+.nil-news-thumb {
+  width: 130px;
+  height: 130px;
+  border-radius: 16px;
+}
+.nil-news time {
+  font-size: .8rem;
+  margin-bottom: 7px;
+}
+.nil-news h3 {
+  font-size: 1.04rem;
+  line-height: 1.28;
+}
+.nil-news a {
+  margin-top: 12px;
+  font-size: .86rem;
+}
+@media (max-width: 1180px) {
+  .nil-news-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  .nil-news-strip { grid-template-columns: 1fr; }
+  .nil-news { grid-template-columns: 108px minmax(0, 1fr); }
+  .nil-news-thumb { width: 108px; height: 108px; }
+}
