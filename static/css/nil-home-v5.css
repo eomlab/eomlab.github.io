@@ -213,3 +213,27 @@
   }
   .nil-gallery-media { aspect-ratio: 16 / 9; }
 }
+
+
+/* People portrait sizing - 2026-09-18 */
+.nil-pi-card {
+  grid-template-columns: 156px minmax(0, 1fr);
+}
+.avatar-pi {
+  width: 144px;
+  height: 144px;
+}
+.nil-student-photo {
+  width: 144px;
+  height: 144px;
+}
+@media (max-width: 720px) {
+  .avatar-pi {
+    width: 126px;
+    height: 126px;
+  }
+  .nil-student-photo {
+    width: 112px;
+    height: 112px;
+  }
+}
