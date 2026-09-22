@@ -1,5 +1,11 @@
 @import url('/css/nil-home-v5.css?v=20260918research');
 
+/* 2026-09-22: reduce homepage hero title by 30% */
+.nil-hero h1 {
+  font-size: clamp(1.75rem, 3.01vw, 3.045rem) !important;
+}
+
+
 .nil-hero {
   grid-template-columns: minmax(420px, 0.86fr) minmax(680px, 1.14fr) !important;
   gap: clamp(30px, 3.6vw, 64px) !important;
