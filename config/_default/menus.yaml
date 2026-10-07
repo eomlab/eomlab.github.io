@@ -19,6 +19,9 @@ main:
   - name: Publications
     url: Publications/
     weight: 20
+  - name: Software
+    url: /software/
+    weight: 25
   - name: Gallery
     url: Gallery/
     weight: 30
