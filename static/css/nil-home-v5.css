@@ -33,9 +33,9 @@
 
 .nil-news-thumb { background-size: cover !important; background-position: center !important; background-repeat: no-repeat !important; }
 .nil-news-thumb::before, .nil-news-thumb::after { display: none !important; }
-.nil-news:nth-child(1) .nil-news-thumb { background-image: url('/uploads/news_1.png'), linear-gradient(135deg, #e8f3ff, #ffffff) !important; }
-.nil-news:nth-child(2) .nil-news-thumb { background-image: url('/uploads/news_2.png'), linear-gradient(135deg, #e8f3ff, #ffffff) !important; }
-.nil-news:nth-child(3) .nil-news-thumb { background-image: url('/uploads/news_3.png'), linear-gradient(135deg, #e8f3ff, #ffffff) !important; }
+.nil-news:nth-child(1) .nil-news-thumb { background-image: url('/uploads/ifmbe-2026-moon-certificate.webp'), linear-gradient(135deg, #e8f3ff, #ffffff) !important; }
+.nil-news:nth-child(2) .nil-news-thumb { background-image: url('/uploads/ifmbe-2026-park-certificate.webp'), linear-gradient(135deg, #e8f3ff, #ffffff) !important; }
+.nil-news:nth-child(3) .nil-news-thumb { background-image: url('/uploads/news_1.png'), linear-gradient(135deg, #e8f3ff, #ffffff) !important; }
 .nil-news.no-image { grid-template-columns: minmax(0, 1fr) !important; }
 .nil-news.no-image .nil-news-thumb { display: none !important; }
 
@@ -295,3 +295,8 @@
   font-size: 1.12rem !important;
   line-height: 1.68 !important;
 }
+
+/* Award certificate thumbnails are clickable at full resolution. */
+.nil-news-page .nil-news-image-link { display: block; width: 160px; max-width: 100%; line-height: 0; }
+.nil-news-page .nil-news-image-link .nil-news-image { display: block; }
+@media (max-width: 1100px) { .nil-news-page .nil-news-image-link { width: 100%; } }
