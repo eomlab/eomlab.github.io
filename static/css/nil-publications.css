@@ -189,3 +189,7 @@
     gap: 4px;
   }
 }
+
+
+/* Temporarily hide Software navigation tab */
+.nil-nav a[href="/software/"] { display: none !important; }
