@@ -108,3 +108,6 @@
   .nil-hero-switcher { min-height: 360px !important; border-radius: 24px !important; }
   .nil-hero-switcher .nil-hero-slide { padding: 16px; }
 }
+
+/* Temporarily hide Software navigation tab */
+.nil-nav a[href="/software/"] { display: none !important; }
