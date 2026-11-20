@@ -300,3 +300,7 @@
 .nil-news-page .nil-news-image-link { display: block; width: 160px; max-width: 100%; line-height: 0; }
 .nil-news-page .nil-news-image-link .nil-news-image { display: block; }
 @media (max-width: 1100px) { .nil-news-page .nil-news-image-link { width: 100%; } }
+
+
+/* Temporarily hide Software navigation tab */
+.nil-nav a[href="/software/"] { display: none !important; }
